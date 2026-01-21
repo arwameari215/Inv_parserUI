@@ -6,6 +6,7 @@ on:
     branches:
      - main
 
+
   workflow_dispatch:
     inputs:
       browser:
@@ -29,14 +30,13 @@ on:
 jobs:
   playwright-tests:
     runs-on: ubuntu-latest
-    
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
       with:
         fetch-depth: 1  # Fetch only the latest commit to speed up the checkout process
         repository: arwameari215/Inv_parserUI  # Replace with your UI testing repo
-      
+
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
